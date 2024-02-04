@@ -1,0 +1,136 @@
+const basic = require("@fanv/eslint-config-basic")
+
+module.exports = {
+    extends: [
+        "@fanv/eslint-config-basic",
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended",
+    ],
+    plugins: [
+        "@stylistic/ts",
+    ],
+    settings: {
+        "import/resolver": {
+            node: { extensions: [".js", ".jsx", ".mjs", ".ts", ".tsx", ".d.ts"] },
+        },
+    },
+    overrides: [
+        ...basic.overrides
+    ],
+    parser: "@typescript-eslint/parser",
+    rules: {
+        "import/named": "off",
+
+        // TS
+        "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
+        "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports", disallowTypeAnnotations: false }],
+        "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+        "@typescript-eslint/prefer-ts-expect-error": "error",
+        "@typescript-eslint/no-require-imports": "error",
+
+        // TS Stylistic
+        "@stylistic/ts/member-delimiter-style": ["error", { multiline: { delimiter: "none" } }],
+        "@stylistic/ts/type-annotation-spacing": ["error", {}],
+
+        // Override JS
+        "no-useless-constructor": "off",
+        "no-invalid-this": "off",
+        "@typescript-eslint/no-invalid-this": "error",
+        "no-redeclare": "off",
+        "@typescript-eslint/no-redeclare": "error",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error", { functions: false, classes: false, variables: true }],
+        "no-dupe-class-members": "off",
+        "@typescript-eslint/no-dupe-class-members": "error",
+        "no-loss-of-precision": "off",
+        "@typescript-eslint/no-loss-of-precision": "error",
+        "semi": "off",
+        "@typescript-eslint/semi": ["error", "never"],
+        "quotes": "off",
+        "@typescript-eslint/quotes": ["error", "double"],
+        "no-extra-parens": "off",
+        "@typescript-eslint/no-extra-parens": ["error", "functions"],
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+
+        // Stylistic JS/TS
+        "@stylistic/js/space-before-blocks": "off",
+        "@stylistic/ts/space-before-blocks": ["error", "always"],
+        "@stylistic/js/space-before-function-paren": "off",
+        "@stylistic/ts/space-before-function-paren": [
+            "error",
+            {
+                anonymous: "always",
+                named: "never",
+                asyncArrow: "always",
+            },
+        ],
+        "@stylistic/js/brace-style": "off",
+        "@stylistic/ts/brace-style": ["error", "stroustrup", { allowSingleLine: true }],
+        "@stylistic/js/object-curly-spacing": "off",
+        "@stylistic/ts/object-curly-spacing": ["error", "always"],
+        "@stylistic/js/space-infix-ops": "off",
+        "@stylistic/ts/space-infix-ops": "error",
+        "@stylistic/js/keyword-spacing": "off",
+        "@stylistic/ts/keyword-spacing": ["error", { before: true, after: true }],
+        // "@stylistic/js/comma-spacing": "off",
+        // "@stylistic/ts/comma-spacing": ["error", { before: false, after: true }],
+        "@stylistic/js/lines-between-class-members": "off",
+        "@stylistic/ts/lines-between-class-members": ["error", "always", { exceptAfterSingleLine: true }],
+        "@stylistic/js/indent": "off",
+        // "@stylistic/ts/indent": ["error", 4, {
+        //     SwitchCase: 2,
+        //     VariableDeclarator: 2,
+        //     outerIIFEBody: 2,
+        //     MemberExpression: 2,
+        //     FunctionDeclaration: { parameters: 2, body: 2 },
+        //     FunctionExpression: { parameters: 2, body: 2 },
+        //     CallExpression: { arguments: 2 },
+        //     ArrayExpression: 2,
+        //     ObjectExpression: 2,
+        //     ImportDeclaration: 2,
+        //     flatTernaryExpressions: false,
+        //     ignoreComments: false,
+        //     ignoredNodes: [
+        //         "TemplateLiteral *",
+        //         "JSXElement",
+        //         "JSXElement > *",
+        //         "JSXAttribute",
+        //         "JSXIdentifier",
+        //         "JSXNamespacedName",
+        //         "JSXMemberExpression",
+        //         "JSXSpreadAttribute",
+        //         "JSXExpressionContainer",
+        //         "JSXOpeningElement",
+        //         "JSXClosingElement",
+        //         "JSXFragment",
+        //         "JSXOpeningFragment",
+        //         "JSXClosingFragment",
+        //         "JSXText",
+        //         "JSXEmptyExpression",
+        //         "JSXSpreadChild",
+        //         "TSTypeParameterInstantiation",
+        //         "FunctionExpression > .params[decorators.length > 0]",
+        //         "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+        //         "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key",
+        //     ],
+        //     offsetTernaryExpressions: true,
+        // }],
+
+        // off
+        "@typescript-eslint/consistent-indexed-object-style": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/parameter-properties": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/triple-slash-reference": "off",
+        // handled by unused-imports/no-unused-imports
+        "@typescript-eslint/no-unused-vars": "off",
+    },
+}

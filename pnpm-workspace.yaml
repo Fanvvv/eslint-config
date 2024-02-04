@@ -1,3 +1,5 @@
 packages:
   # all packages in direct subdirs of packages/
   - 'packages/*'
+  # 不包括在 test 文件夹下的 package
+  - '!**/test/**'

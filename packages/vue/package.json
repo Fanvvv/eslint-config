@@ -1,0 +1,27 @@
+{
+  "name": "@fanv/eslint-config-vue",
+  "version": "0.0.0",
+  "description": "",
+  "author": "fanv <me@fanjs.cn> (https://github.com/Fanvvv)",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config",
+    "eslint-config-vue"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=8.29.0"
+  },
+  "dependencies": {
+    "@fanv/eslint-config-basic": "^0.0.0",
+    "@fanv/eslint-config-ts": "^0.0.0",
+    "eslint-plugin-vue": "^9.21.1",
+    "local-pkg": "^0.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0"
+  }
+}

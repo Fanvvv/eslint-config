@@ -1,0 +1,36 @@
+{
+  "name": "@fanv/eslint-config-basic",
+  "version": "0.0.0",
+  "description": "A basic ESLint configuration",
+  "author": "fanv <me@fanjs.cn> (https://github.com/Fanvvv)",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js --fix"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.29.0"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^1.5.4",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsonc": "^2.13.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^50.0.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-yml": "^1.12.2",
+    "jsonc-eslint-parser": "^2.4.0",
+    "yaml-eslint-parser": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0"
+  }
+}

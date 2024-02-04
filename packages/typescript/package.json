@@ -1,0 +1,24 @@
+{
+  "name": "@fanv/eslint-config-ts",
+  "version": "0.0.0",
+  "description": "",
+  "author": "fanv <me@fanjs.cn> (https://github.com/Fanvvv)",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=8.29.0",
+    "typescript": ">=4.9.4"
+  },
+  "dependencies": {
+    "@fanv/eslint-config-basic": "^0.0.0",
+    "@stylistic/eslint-plugin-ts": "^1.5.4",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0"
+  }
+}

@@ -1,9 +1,11 @@
 {
   "name": "@fanv/eslint-config-monorepo",
-  "version": "1.0.0",
-  "packageManager": "pnpm@7.18.1",
-  "description": "eslint eslint-config",
+  "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@8.14.0",
+  "description": "eslint eslint-config",
+  "author": "fanv <me@fanjs.cn> (https://github.com/Fanvvv)",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint ."
   },
@@ -11,10 +13,9 @@
     "eslint",
     "eslint-config"
   ],
-  "author": "fanv (https://github.com/fanvvv)",
-  "license": "MIT",
   "devDependencies": {
     "eslint": "^8.29.0",
+    "lerna": "^8.0.2",
     "typescript": "^4.9.4"
   }
 }
