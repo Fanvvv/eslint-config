@@ -9,7 +9,7 @@ module.exports = {
     reportUnusedDisableDirectives: true,
     // extends 引入插件的 recommended rules 集合
     extends: [
-        "standard",
+        "./standard",
         "plugin:import/recommended",
         "plugin:eslint-comments/recommended",
         "plugin:jsonc/recommended-with-jsonc",

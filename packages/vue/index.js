@@ -1,7 +1,6 @@
 const { isPackageExists } = require("local-pkg")
 // 检查是否安装了 ts 包
 const TS = isPackageExists("typescript")
-console.log("TS:", TS)
 
 module.exports = {
     overrides: [
