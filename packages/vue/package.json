@@ -16,8 +16,8 @@
     "eslint": ">=8.29.0"
   },
   "dependencies": {
-    "@fanv/eslint-config-basic": "^0.0.0",
-    "@fanv/eslint-config-ts": "^0.0.0",
+    "@fanv/eslint-config-basic": "workspace:^",
+    "@fanv/eslint-config-ts": "workspace:^",
     "eslint-plugin-vue": "^9.21.1",
     "local-pkg": "^0.5.0"
   },
